@@ -1,0 +1,5 @@
+.carousel-control-prev span.carousel-control-prev-icon,
+.carousel-control-next span.carousel-control-next-icon
+{
+    color: red;
+}
