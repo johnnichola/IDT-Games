@@ -37,8 +37,12 @@
     
     <!-- HERO SECTION -->
     <div class="position-relative w-100" style="height: calc(100vh - 72px);">
-        <div class="container h-100 position-relative">
-            <img src="assets/hero_page.png" class="d-block w-100 h-100 object-fit-cover">
+        <div class="container h-100 position-relative overflow-hidden">
+            <picture>
+                <source srcset="assets/hero_page.png" media="(min-width: 768px)">
+                <img src="assets/hero_page_mobile.png" style="height: auto; object-position: top;" class="d-block w-100 object-fit-fill">
+            </picture>
+            <!-- <img src="assets/hero_page.png" class="d-block w-100 h-100 object-fit-cover"> -->
 
             <button style="top:90%; width: 100px; height: auto"class=" btn bg-transparent border-0 shadow-none position-absolute start-50 translate-middle d-flex justify-content-center align-items-center flex-column">
                 <h1 class="fs-4 text-white" style="width: 500px">Explore more</h1>
@@ -51,14 +55,14 @@
     <div class="py-5">
 
         <!-- Action Games -->
-        <div class="container">
+        <div class="container mt-5">
             <h1 class="fs-3 fw-bold" style="color: #3b3b3b">Action Games</h1>
         </div>
 
         <div class="container text-center">
             <div class="row gx-3" style="color: #3b3b3b">
                 <div class="col">
-                    <div style="background-color: #92929200; height: 400px">
+                    <div style="background-color: #92929200;">
                         <div class="w-100 h-auto">
                             <a href="https://thewickedproduction.com/games/blackjack/" class="w-100 h-100">
                                 <img src="assets/card thumbnails/blackjack_card.png" class="rounded-4 w-100 h-auto object-fit-contain">
@@ -70,7 +74,7 @@
                     </div>
                 </div>
                 <div class="col">
-                    <div style="background-color: #92929200; height: 400px">
+                    <div style="background-color: #92929200;">
                         <div class="w-100 h-auto">
                             <a href="https://thewickedproduction.com/games/clicker/" class="w-100 h-100">
                                 <img src="assets/card thumbnails/idle_clicker_card.png" class="rounded-4 w-100 h-auto object-fit-contain">
@@ -82,7 +86,7 @@
                     </div>
                 </div>
                 <div class="col">
-                    <div style="background-color: #92929200; height: 400px">
+                    <div style="background-color: #92929200;">
                         <div class="w-100 h-auto">
                             <img src="assets/carousel/blackjack_hero.png" class="rounded-4 w-100 h-auto object-fit-contain">
                         </div>
@@ -95,14 +99,14 @@
         </div>
 
         <!-- Reaction Games -->
-        <div class="container">
+        <div class="container mt-5">
             <h1 class="fs-3 fw-bold" style="color: #3b3b3b">Reaction Games</h1>
         </div>
 
         <div class="container text-center">
             <div class="row gx-3" style="color: #3b3b3b">
                 <div class="col">
-                    <div style="background-color: #92929200; height: 400px">
+                    <div style="background-color: #92929200;">
                         <div class="w-100 h-auto">
                             <a href="https://thewickedproduction.com/games/aim/" class="w-100 h-100">
                                 <img src="assets/card thumbnails/aim_card.png" class="rounded-4 w-100 h-auto object-fit-contain">
@@ -114,7 +118,7 @@
                     </div>
                 </div>
                 <div class="col">
-                    <div style="background-color: #92929200; height: 400px">
+                    <div style="background-color: #92929200;">
                         <div class="w-100 h-auto">
                             <a href="https://thewickedproduction.com/games/reaction/" class="w-100 h-100">
                                 <img src="assets/card thumbnails/react_card.png" class="rounded-4 w-100 h-auto object-fit-contain">
@@ -126,7 +130,7 @@
                     </div>
                 </div>
                 <div class="col">
-                    <div style="background-color: #92929200; height: 400px">
+                    <div style="background-color: #92929200;">
                         <div class="w-100 h-auto">
                             <img src="assets/card thumbnails/guess_card.png" class="rounded-4 w-100 h-auto object-fit-contain">
                         </div>
@@ -139,10 +143,14 @@
         </div>
     </div>
 
-    <!-- HERO SECTION -->
-    <div class="position-relative w-100" style="height: calc(100vh - 72px);">
+    <!-- GACHA SECTION -->
+    <div class="container position-relative w-100">
         <div class="container h-100 position-relative">
-            <img src="assets/gacha_page.png" class="rounded-4 d-block w-100 h-100 object-fit-fill">
+            <picture>
+                <source srcset="assets/gacha_page.png" media="(min-width: 768px)">
+                <img src="assets/gacha_page_mobile.png" class="rounded-4 d-block w-100 h-100 object-fit-contain">
+            </picture>
+            <!-- <img src="assets/gacha_page.png" class="rounded-4 d-block w-100 h-100 object-fit-contain"> -->
         </div>
     </div>
 
