@@ -11,10 +11,10 @@
 </head>
 <body class="p-2" data-bs-spy="scroll" data-bs-target="#navbarNav" data-bs-offset="50" style="background-color: #c6c4c4">
 
-    <nav class="navbar navbar-expand-lg shadow-lg z-3" style="background-color: #c6c4c4;">
+    <nav class="navbar navbar-expand-lg shadow-lg z-3" style="background-color: #c6c4c4; height: 72px">
         <div class="container">
             <a class="navbar-brand" href="#">
-                <img src="assets/logo/idt_logo.png" style="width: 150px; height: auto">
+                <img src="assets/logo/Main_no-sub.png" style="width: 100px; height: auto">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -36,55 +36,139 @@
     </nav>
     
     <!-- HERO SECTION -->
-    <div class="position-relative" style="height: 100vh;">
-        <div class="container position-relative">
-            <img src="assets/hero_page.png" class="d-block w-100 h-100 object-fit-contain">
-            <button style="top:90%; width: 200px; height: auto"class=" btn bg-transparent border-0 shadow-none position-absolute start-50 translate-middle d-flex justify-content-center align-items-center flex-column">
-                <h1 class="fs-3 text-white">Explore more</h1>
-                <img src="assets/elements/drop_arrow_white.png" style="width: 100px; height: auto">
+    <div class="position-relative w-100" style="height: calc(100vh - 72px);">
+        <div class="container h-100 position-relative">
+            <img src="assets/hero_page.png" class="d-block w-100 h-100 object-fit-cover">
+
+            <button style="top:90%; width: 100px; height: auto"class=" btn bg-transparent border-0 shadow-none position-absolute start-50 translate-middle d-flex justify-content-center align-items-center flex-column">
+                <h1 class="fs-4 text-white" style="width: 500px">Explore more</h1>
+                <img src="assets/elements/drop_arrow_white.png" style="width: 100%; height: auto">
             </button>
         </div>
     </div>
 
     <!-- ITEM TILE SECTION -->
-    <div style="height: 90vh;">
+    <div class="py-5">
+
+        <!-- Action Games -->
         <div class="container">
-            <h1 class="fs-3">Action Games</h1>
+            <h1 class="fs-3 fw-bold" style="color: #3b3b3b">Action Games</h1>
         </div>
 
+        <div class="container text-center">
+            <div class="row gx-3" style="color: #3b3b3b">
+                <div class="col">
+                    <div style="background-color: #92929200; height: 400px">
+                        <div class="w-100 h-auto">
+                            <a href="https://thewickedproduction.com/games/blackjack/" class="w-100 h-100">
+                                <img src="assets/card thumbnails/blackjack_card.png" class="rounded-4 w-100 h-auto object-fit-contain">
+                            </a>
+                        </div>
+                        <div class="fw-bold d-flex align-items-start">
+                            IDT Blackjack
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div style="background-color: #92929200; height: 400px">
+                        <div class="w-100 h-auto">
+                            <a href="https://thewickedproduction.com/games/clicker/" class="w-100 h-100">
+                                <img src="assets/card thumbnails/idle_clicker_card.png" class="rounded-4 w-100 h-auto object-fit-contain">
+                            </a>
+                        </div>
+                        <div class="fw-bold d-flex align-items-start">
+                            Idle Clicker
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div style="background-color: #92929200; height: 400px">
+                        <div class="w-100 h-auto">
+                            <img src="assets/carousel/blackjack_hero.png" class="rounded-4 w-100 h-auto object-fit-contain">
+                        </div>
+                        <div class="fw-bold d-flex align-items-start">
+                            WIP Game
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Reaction Games -->
+        <div class="container">
+            <h1 class="fs-3 fw-bold" style="color: #3b3b3b">Reaction Games</h1>
+        </div>
+
+        <div class="container text-center">
+            <div class="row gx-3" style="color: #3b3b3b">
+                <div class="col">
+                    <div style="background-color: #92929200; height: 400px">
+                        <div class="w-100 h-auto">
+                            <a href="https://thewickedproduction.com/games/aim/" class="w-100 h-100">
+                                <img src="assets/card thumbnails/aim_card.png" class="rounded-4 w-100 h-auto object-fit-contain">
+                            </a>
+                        </div>
+                        <div class="fw-bold d-flex align-items-start">
+                            Aim Trainer
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div style="background-color: #92929200; height: 400px">
+                        <div class="w-100 h-auto">
+                            <a href="https://thewickedproduction.com/games/reaction/" class="w-100 h-100">
+                                <img src="assets/card thumbnails/react_card.png" class="rounded-4 w-100 h-auto object-fit-contain">
+                            </a>
+                        </div>
+                        <div class="fw-bold d-flex align-items-start">
+                            React Fast!
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div style="background-color: #92929200; height: 400px">
+                        <div class="w-100 h-auto">
+                            <img src="assets/card thumbnails/guess_card.png" class="rounded-4 w-100 h-auto object-fit-contain">
+                        </div>
+                        <div class="fw-bold d-flex align-items-start">
+                            Guess The Number
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <!-- CAROUSEL -->
-    <!-- <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-lable="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-lable="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-lable="Slide 3"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-lable="Slide 4"></button>
+    <!-- HERO SECTION -->
+    <div class="position-relative w-100" style="height: calc(100vh - 72px);">
+        <div class="container h-100 position-relative">
+            <img src="assets/gacha_page.png" class="rounded-4 d-block w-100 h-100 object-fit-fill">
         </div>
-        <div class="carousel-inner" style="height: 90vh; max-height: 100%;">
-            <div class="carousel-item active" style="height: 100%">
-                <img src="assets/carousel/blackjack_hero2.png" class="d-block w-100 h-100 object-fit-contain">
+    </div>
+
+    <!-- FOOTER -->
+    <div class="container">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+            <div class="col-md-4 d-flex align-items-center">
+                <a href="#" class="mb-3 mb-md-0 text-body-secondary text-decoration-none 1h-1" aria-label="Bootstrap">
+                    <img src="assets/logo/Main_no-sub.png" style="width: 80px; height: auto">
+                </a>
+                <span class="mb-3 mb-md-0 text-body-secondary">© 2026 IDT Games, Inc</span>
             </div>
-            <div class="carousel-item" style="height: 100%">
-                <img src="assets/carousel/reaction_hero.png" class="d-block w-100 h-100 object-fit-contain">
-            </div>
-            <div class="carousel-item" style="height: 100%">
-                <img src="assets/carousel/aim_hero.png" class="d-block w-100 h-100 object-fit-contain">
-            </div>
-            <div class="carousel-item" style="height: 100%">
-                <img src="assets/carousel/clicker_hero.png" class="d-block w-100 h-100 object-fit-contain">
-            </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-    </div> -->
+            <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+                <li class="ms-3">
+                    <a class="text-body-secondary" href="#" aria-label="Instagram">
+                        <img src="assets/elements/instagram.png" style="width: 50px; height: auto">
+                    </a>
+                </li>
+                <li class="ms-3">
+                    <a class="text-body-secondary" href="#" aria-label="Facebook">
+                        <img src="assets/elements/facebook.png" style="width: 50px; height: auto">
+                    </a>
+                </li>
+            </ul>
+        </footer>
+    </div>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
