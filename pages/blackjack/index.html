@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blackjack</title>
+    <!-- Bootstrap 5.3.8 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css" type="text/css">
 </head>
 <body>
@@ -15,7 +17,7 @@
             <button id="bet3" class="bet-btn" onclick="onBet(500)"></button>
             <button id="bet4" class="bet-btn" onclick="onBet(1000)"></button>
         </div>
-        <div class="top-right">
+        <div style="gap: 20px" class="top-right d-flex flex-column align-items-center justify-content-center">
             <div id="dealer-card-container" class="bottom-container"></div>
             <h2 id="dealer-card-count">0</h2>
 
@@ -36,6 +38,9 @@
         <p>v0.0.8</p>
     </div>
     <img src="assets/cards/back_card.png" id="customCursor">
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     <script src="script.js"></script>
 </body>
 </html>
