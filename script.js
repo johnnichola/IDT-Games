@@ -1,4 +1,43 @@
 
+const inputField = document.getElementById("guess-input");
+const guessAlert = document.getElementById("guess-alert");
+const guessCountText = document.getElementById("guess-count");
+let guessCount = 0;
+
+guessMagic();
+function guessMagic()
+{
+    const _randNum = Math.floor(Math.random() * 100) + 1;
+    inputField.addEventListener('keydown', function(event)
+    {
+        if(event.key == "Enter")
+        {
+            console.log("I hate magic: " + inputField.value);
+
+            if(inputField.value == _randNum)
+            {
+                alert("Congratulations! You guessed the correct number: " + _randNum);
+                guessCount = 0;
+                guessCountText.innerHTML = "Guess Count: 0";
+                guessAlert.innerHTML = "";
+            }
+            else
+            {
+                guessCount++;
+                guessCountText.innerHTML = "Guess Count: " + guessCount;
+
+                if(inputField.value > _randNum)
+                    guessAlert.innerHTML = "Too high! Try again.";
+                else
+                    guessAlert.innerHTML = "Too low! Try again.";
+            }
+
+            inputField.value = "";
+        }
+    });
+}
+
+
 // this is for scrolling to specific section
 function onScrollToSection(event)
 {
