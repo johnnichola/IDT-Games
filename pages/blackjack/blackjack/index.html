@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blackjack</title>
+    <link rel="stylesheet" href="styles.css" type="text/css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="flex justify-center items-center h-[95vh] w-full box-border p-[20px]">
+        <div class="center-container">
+            <div class="top-left">
+                <h3 id="gold-text">Gold: 500</h3>
+                <button id="bet1" class="bet-btn" onclick="onBet(100)"></button>
+                <button id="bet2" class="bet-btn" onclick="onBet(200)"></button>
+                <button id="bet3" class="bet-btn" onclick="onBet(500)"></button>
+                <button id="bet4" class="bet-btn" onclick="onBet(1000)"></button>
+            </div>
+            <div class="top-right">
+                <div id="dealer-card-container" class="bottom-container"></div>
+                <h2 id="dealer-card-count">0</h2>
+
+                <h1 id="game-state">------------</h1>
+                <button id="start-button" onclick="startGame()">
+                    NEW GAME
+                </button>
+
+                <h2 id="player-card-count">0</h2>
+                <div id="player-card-container" class="bottom-container"></div>
+            </div>
+            <div class="bottom-left"></div>
+            <div class="bottom-right">
+                <button id="hit-btn" class="main-btn" onclick="onHit()"></button>
+                <button id="stand-btn" class="main-btn" onclick="onStand()"></button>
+                </div>
+            </div>
+        </div>
+        <img src="assets/cards/back_card.png" id="customCursor">
+        <p>v0.0.8</p>
+    </div>
+    <script src="js/blackjack.js"></script>
+    <script src="js/gacha.js"></script>
+</body>
+</html>

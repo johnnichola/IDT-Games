@@ -1,9 +1,8 @@
 
+//#region GUESSING GAME
 const inputField = document.getElementById("guess-input");
 const guessCountText = document.getElementById("guess-count");
 const restartBtn = document.getElementById("restart-btn");
-
-// ----- Guess Page -----
 const guessRow = document.getElementById("guess-row");
 const lowestGuess = document.getElementById("highscore");
 let guessCount = 0;
@@ -66,7 +65,7 @@ function initGuessPage()
         }
     });
 }
-// ----- END GUESS PAGE -----
+//#endregion
 
 // this is for scrolling to specific section
 function onScrollToSection(event)
