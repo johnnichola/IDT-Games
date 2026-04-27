@@ -13,10 +13,20 @@ body
     height: 90vh;
 
     /* Left column small, right column large */
-    grid-template-columns: 1fr 8fr;
+    /* grid-template-columns: 1fr 8fr; */
 
     /* Top row big, bottom row short bar */
-    grid-template-rows: 1fr 90px;
+    /* grid-template-rows: 1fr 90px; */
+}
+/* Top Left */
+.top-left 
+{
+    /* display: flex;
+    flex-flow: column;
+
+    align-items: center;
+    justify-content: center;*/
+    gap: 20px; 
 }
 
 /* Top Right (big area) */
@@ -64,9 +74,9 @@ body
 }
 #start-button.selected
 {
-    background: gold;
+    /* background: gold; */
     color: black;
-    border-color: gold;
+    /* border-color: gold; */
     transform: scale(1.1);
 }
 
@@ -128,7 +138,7 @@ body
     width: 150px; height: 70px;
 }
 
-.top-left .bet-btn
+.bet-btn
 {
     width: 150px; height: 70px;
 }

@@ -25,6 +25,9 @@ const goldElem = document.getElementById("gold-text");
 const playerCardContainerElem = document.getElementById("player-card-container");
 const dealerCardContainerElem = document.getElementById("dealer-card-container");
 
+const betGroup = document.getElementById("bet-group");
+const actionGroup = document.getElementById("action-group");
+
 const bet100Elem = document.getElementById("bet-100");
 const bet200Elem = document.getElementById("bet-200");
 const bet500Elem = document.getElementById("bet-500");
@@ -141,6 +144,10 @@ function onBet(betValue)
     else if(gold >= betValue)
     {
         console.log("2");
+
+        betGroup.classList.add("d-none");
+        actionGroup.classList.remove("d-none");
+
         betAmount = betValue;
         hasBet = true;
     
@@ -180,6 +187,9 @@ function resetGame()
     goldElem.innerHTML = "GOLD: " + gold;
     startButtonElem.classList.remove("selected");
     startButtonElem.style.display = "none";
+
+    betGroup.classList.remove("d-none");
+    actionGroup.classList.add("d-none");
 }
 
 function resetAllBetButtons()
