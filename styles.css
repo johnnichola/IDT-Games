@@ -3,3 +3,18 @@
 {
     color: red;
 }
+
+/* For the item panels zoom effect when hovered */
+.zoom-container
+{
+    overflow: hidden;
+    border-radius: 1rem;
+}
+.zoom-container img
+{
+    transition: transform 0.3s ease;
+}
+.zoom-container:hover img
+{
+    transform: scale(1.1);
+}
