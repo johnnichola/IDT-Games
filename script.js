@@ -1,19 +1,21 @@
 
 const inputField = document.getElementById("guess-input");
-const guessAlert = document.getElementById("guess-alert");
 const guessCountText = document.getElementById("guess-count");
 const restartBtn = document.getElementById("restart-btn");
 
-
 // ----- Guess Page -----
+const guessRow = document.getElementById("guess-row");
+const lowestGuess = document.getElementById("highscore");
 let guessCount = 0;
 let guessTargetNum = 0;
+let highscore = Infinity;
 
 initGuessPage();
 
 function generateRandomNum()
 {
     guessTargetNum = Math.floor(Math.random() * 100) + 1;
+    console.log("Target number: " + guessTargetNum);
 }
 function initGuessPage()
 {
@@ -23,32 +25,41 @@ function initGuessPage()
         restartBtn.classList.remove("d-none");
         guessCount = 0;
         guessCountText.innerHTML = "Guess Count: 0";
-        guessAlert.innerHTML = "";
         restartBtn.classList.add("d-none");
-
+        guessRow.innerHTML = "";
         generateRandomNum();
     });
     inputField.addEventListener('keydown', function(event)
     {
         if(event.key == "Enter")
         {
-            console.log("I hate magic: " + inputField.value);
+            if(inputField.value == "") return;
 
-            if(inputField.value == guessTargetNum)
+            const _yourInput = inputField.value;
+            console.log("I hate magic: " + _yourInput);
+
+            // IF CORRECT
+            if(_yourInput == guessTargetNum)
             {
                 alert("Congratulations! You guessed the correct number: " + guessTargetNum);
-                guessAlert.innerHTML = "";
+                guessRow.innerHTML += `<tr><th scope="row" class="text-warning">${_yourInput}</th></tr>`;
                 restartBtn.classList.remove("d-none");
+
+                // Check if highscore is beaten
+                if(_yourInput < highscore)
+                {
+                    highscore = guessCount;
+                    lowestGuess.innerHTML = guessCount;
+                }
             }
-            else
+            else // IF WRONG
             {
                 guessCount++;
                 guessCountText.innerHTML = "Guess Count: " + guessCount;
 
-                if(inputField.value > guessTargetNum)
-                    guessAlert.innerHTML = "Too high! Try again.";
-                else
-                    guessAlert.innerHTML = "Too low! Try again.";
+                const _tooHigh = _yourInput > guessTargetNum;
+
+                guessRow.innerHTML += `<tr><th scope="row" class="${_tooHigh ? 'text-primary' : 'text-danger'}">${_yourInput}</th></tr>`;
             }
 
             inputField.value = "";
