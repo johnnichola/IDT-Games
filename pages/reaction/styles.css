@@ -1,0 +1,32 @@
+html, body
+{
+    height: 100%;
+    margin: 0; padding: 0;
+    overflow: hidden;
+}
+
+.fullscreen-container
+{
+    height: 100vh; width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#fullscreen-button
+{
+    height: 100%; width: 100%;
+    border: none;
+    color: white;
+    background-color: #11c1ed;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 50px;
+    box-sizing: border-box;
+}
+#ranking
+{
+    text-align: center;
+}
