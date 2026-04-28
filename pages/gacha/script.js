@@ -15,6 +15,8 @@ const cardRevealSection = document.getElementById("card-reveal-section");
 const gachaCost = 5;
 let currentGold = Main.getGold();
 
+document.getElementById("gold-count").textContent = currentGold;
+
 chestBtn.addEventListener('click', () => 
 {
     // If not enough money
@@ -27,6 +29,9 @@ chestBtn.addEventListener('click', () =>
 
     // Spend gold based on gachaCost
     Main.spendGold(gachaCost);
+    currentGold = Main.getGold();
+    
+    document.getElementById("gold-count").textContent = currentGold;
 
     chestBtn.disabled = true; // disable chest button
     chestImg.classList.add("chest-sprite-anim"); // play animation
