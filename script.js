@@ -3,6 +3,7 @@ import * as Main from './main.js';
 
 const goldText = document.getElementById("gold-count");
 
+localStorage.removeItem("gold");
 let currentGold = Main.getGold();
 
 console.log("Current Gold: " + currentGold);

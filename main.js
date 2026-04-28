@@ -1,7 +1,9 @@
 let gold = 0;
 
+
 export function addGold(value)
 {
+    
     gold = getGold();
     gold += value;
     localStorage.setItem("gold", gold.toString());
@@ -17,4 +19,12 @@ export function spendGold(value)
     console.log("Spent Gold: " + value + " || Total Gold: " + gold);
 }
 
-export function getGold(){ return parseInt(localStorage.getItem("gold")); }
+export function getGold()
+{ 
+    if(localStorage.getItem("gold") === null)
+    {
+        console.log("gold save does not exist, creating one...");
+        localStorage.setItem("gold", "0");
+    }
+    return parseInt(localStorage.getItem("gold")); 
+}
