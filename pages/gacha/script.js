@@ -1,3 +1,6 @@
+
+import * as Main from '../../main.js';
+
 const chestBtn = document.getElementById("chest-button");
 const chestImg = document.getElementById("chest-sprite");
 const whiteFlash = document.getElementById("white-flash");
@@ -9,13 +12,27 @@ const chestSection = document.getElementById("chest-section");
 const cardSection = document.getElementById("card-section");
 const cardRevealSection = document.getElementById("card-reveal-section");
 
+const gachaCost = 5;
+let currentGold = Main.getGold();
+
 chestBtn.addEventListener('click', () => 
 {
-    chestBtn.disabled = true;
-    chestImg.classList.add("chest-sprite-anim");
+    // If not enough money
+    if(currentGold < gachaCost)
+    {
+        const _goldNeeded = gachaCost - currentGold;
+        alert(`Not enough gold! You need ${_goldNeeded} more!`);
+        return;
+    }
+
+    // Spend gold based on gachaCost
+    Main.spendGold(gachaCost);
+
+    chestBtn.disabled = true; // disable chest button
+    chestImg.classList.add("chest-sprite-anim"); // play animation
     console.log("Chest clicked!");  
 
-    playChestAnim();
+    playChestAnim(); // play the transition
 });
 
 resetBtn.addEventListener('click', resetGacha);
