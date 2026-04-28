@@ -40,6 +40,8 @@ const bet1000Elem = document.getElementById("bet-1000");
 addGold(startingGold);
 startGame();
 
+alert("Reach 3000 Gold to earn 2 global gold for Gacha!");
+
 startButtonElem.style.display = "none";
 
 document.getElementById("bet1").addEventListener('click', () => onBet(100));
@@ -273,7 +275,7 @@ function addGold(value)
     if(gold >= 3000 && !hasGottenReward)
     {
         hasGottenReward = true;
-        Main.addGold(1);
+        Main.addGold(2);
     }
 }
 function spendGold(value)

@@ -1,0 +1,12 @@
+I love this project to the point I got late submitting this. It was really fun creating this website. I have a lot of plans for this but some of them got shelved due to time. 
+I started this project with me hating on bootstrap but it ended with me loving it. I think it was the fact that I got used to it. Although, tailwind is still better because I get to modify values within the class instead of putting it in style. 
+<br>
+<br>
+<span class="fw-bold">Here are the hurdles along the way: </span>
+<br>1. I used some of the games I made before this project. I had a lot of problems trying to refactor the code so I can make way for bootstrap. 
+<br>2. Persistent data is hard. There's a thing called "localStorage" and it is similar to "PlayerPrefs" in Unity where data can be transferred in between scenes/pages. I created a main javascript file to hold all the data and some pages will get it to add gold and other values.
+<br>3. Next one is connected to #2. Since my adding gold methods are exports/public methods, I need to turn my scripts into modules. Because of this, the "onClick" methods in HTML are no longer working. I have to replace them with event listeners in javascript. This is easy but it is a hassle.
+
+<br>
+<br>
+If I had more time, I would create a turn-based game. Just a simple one and I have sketches for it. I have more projects that I need to work on so I skipped that.
