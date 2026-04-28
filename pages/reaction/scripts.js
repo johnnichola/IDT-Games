@@ -1,3 +1,6 @@
+
+import * as Main from '../../main.js';
+
 let isPlaying = false;
 let shouldClick = false;
 let isFailed = false;
@@ -7,13 +10,14 @@ let countdown;
 let leaderboards = [];
 let best;
 
+let hasGottenReward = false;
+
+button.addEventListener('click', buttonFunction);
+
 function buttonFunction()
 {
     if(!isPlaying)
     {
-        // console.log("=========");
-        // console.log(`Leaderboards: ${leaderboards}`);
-        // console.log(`Leaderboards length: ${leaderboards.length}`);
         if(isFailed)
         {
             isFailed = false;
@@ -61,6 +65,13 @@ function updateLeaderboards(newEntry)
     {
         best = newEntry;
         document.getElementById("ranking").innerText = `Best: ${best}ms`;
+
+        // add 1 global gold if you got 350ms or below
+        if(best <= 350 && !hasGottenReward)
+        {
+            hasGottenReward = true;
+            Main.addGold(1);
+        }
     }
 
     // if(leaderboards.length > 0)
