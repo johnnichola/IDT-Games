@@ -62,8 +62,9 @@ function levelUpEnemy()
     enemyImg.src = `assets/enemies/enemy${num}.png`;
     showUgPanel(true);
 
-    // Add 2 gold when you reach lvl 10
-    Main.addGold(2);
+    // Add 2 gold when you reach lvl 5
+    if(currentEnemyLvl == 5)
+        Main.addGold(2);
 }
 
 function showUgPanel(isShow)

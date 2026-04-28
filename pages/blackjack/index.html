@@ -16,7 +16,7 @@
             <h2 id="dealer-card-count" class="text-white fw-bold">0</h2>
 
             <h1 id="game-state">------------</h1>
-            <button id="start-button" class="btn btn-warning fw-bold text-white" onclick="startGame()">
+            <button id="start-button" class="btn btn-warning fw-bold text-white">
                 NEW GAME
             </button>
 
@@ -27,14 +27,14 @@
         <div class="bottom-right">
             <div id="bet-group">
                 <h3 style="color: #ffd848" class="fw-bold">Gold: <span id="gold-text" class="fw-normal">500</span></h3>
-                <button id="bet1" class="bet-btn" onclick="onBet(100)"></button>
-                <button id="bet2" class="bet-btn" onclick="onBet(200)"></button>
-                <button id="bet3" class="bet-btn" onclick="onBet(500)"></button>
-                <button id="bet4" class="bet-btn" onclick="onBet(1000)"></button>
+                <button id="bet1" class="bet-btn"></button>
+                <button id="bet2" class="bet-btn"></button>
+                <button id="bet3" class="bet-btn"></button>
+                <button id="bet4" class="bet-btn"></button>
             </div>
             <div id="action-group" class="d-none">
-                <button id="hit-btn" class="main-btn" onclick="onHit()"></button>
-                <button id="stand-btn" class="main-btn" onclick="onStand()"></button>
+                <button id="hit-btn" class="main-btn"></button>
+                <button id="stand-btn" class="main-btn"></button>
             </div>
         </div>
     </div>
@@ -44,6 +44,6 @@
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-    <script src="script.js"></script>
+    <script type="module" src="script.js"></script>
 </body>
 </html>

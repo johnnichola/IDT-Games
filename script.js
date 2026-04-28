@@ -1,6 +1,14 @@
 
 import * as Main from './main.js';
 
+const goldText = document.getElementById("gold-count");
+
+let currentGold = Main.getGold();
+
+console.log("Current Gold: " + currentGold);
+
+goldText.textContent = currentGold;
+
 // scroll to specific area
 document.getElementById("scroll-btn").addEventListener('click', (event) => 
 {

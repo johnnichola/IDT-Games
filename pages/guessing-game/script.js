@@ -1,3 +1,6 @@
+
+import * as Main from '../../main.js';
+
 const inputField = document.getElementById("guess-input");
 const guessCountText = document.getElementById("guess-count");
 const restartBtn = document.getElementById("restart-btn");
@@ -6,6 +9,8 @@ const lowestGuess = document.getElementById("highscore");
 let guessCount = 0;
 let guessTargetNum = 0;
 let highscore = Infinity;
+
+let hasGottenReward = false;
 
 initGuessPage();
 
@@ -50,6 +55,13 @@ function initGuessPage()
                 {
                     highscore = guessCount;
                     lowestGuess.innerHTML = guessCount;
+
+                    // add 1 global gold if you got 4 guess or less
+                    if(highscore <= 4 && !hasGottenReward)
+                    {
+                        hasGottenReward = true;
+                        Main.addGold(1);
+                    }
                 }
             }
             else // IF WRONG

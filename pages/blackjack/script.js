@@ -1,4 +1,6 @@
 
+import * as Main from '../../main.js';
+
 let cards = ["K", "Q", "J", "A"];
 let playerCards = [];
 let dealerCards = [];
@@ -14,6 +16,8 @@ let hasStand = false;
 let hasBet = false;
 let hasSpent = false;
 let isGameOver = false;
+
+let hasGottenReward = false;
 
 const startButtonElem = document.getElementById("start-button");
 const playerCardsElem = document.getElementById("player-cards");
@@ -37,6 +41,16 @@ addGold(startingGold);
 startGame();
 
 startButtonElem.style.display = "none";
+
+document.getElementById("bet1").addEventListener('click', () => onBet(100));
+document.getElementById("bet2").addEventListener('click', () => onBet(200));
+document.getElementById("bet3").addEventListener('click', () => onBet(500));
+document.getElementById("bet4").addEventListener('click', () => onBet(1000));
+
+document.getElementById("hit-btn").addEventListener('click', () => onHit());
+document.getElementById("stand-btn").addEventListener('click', () => onStand());
+
+document.getElementById("start-button").addEventListener('click', () => startGame());
 
 async function startGame()
 {
@@ -254,6 +268,13 @@ function addGold(value)
 {
     gold += value;
     goldElem.innerHTML = gold;
+
+    // add 1 global gold if you reach 3000 blackjack gold
+    if(gold >= 3000 && !hasGottenReward)
+    {
+        hasGottenReward = true;
+        Main.addGold(1);
+    }
 }
 function spendGold(value)
 {

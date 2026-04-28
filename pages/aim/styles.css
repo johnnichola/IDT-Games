@@ -1,0 +1,65 @@
+html, body
+{
+    height: 100%; width: 100vw;
+    margin: 0; padding: 0;
+    background-color: #11c1ed;
+}
+
+.box-container
+{
+    padding: 0; margin: 0;
+    height: 100%; width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+.container
+{
+    width: 60%; height: 60%;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    position: relative;
+    overflow: hidden;
+}
+
+.upper-container
+{
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#start-button
+{
+    width: 120px; height: 80px;
+    font-size: 30px;
+    align-items: center; justify-content: center;
+}
+
+#move-button
+{
+    background-image: url("assets/target.png");
+    background-size: 150px 150px;
+    border: none;
+    background-color: #11c1ed;
+    position: absolute;
+    padding: 10px 20px;
+    cursor: pointer;
+    width: 150px; height: 150px;
+    /* transition: all 0.3s ease; */
+}
+
+#move-button:disabled
+{
+    background-image: none;
+    background-color: rgba(255, 255, 255, 0);
+    color: white;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+#react-time
+{
+    font-size: 60px;
+    color: white;
+}
