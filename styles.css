@@ -19,3 +19,40 @@
 {
     transform: scale(1.1);
 }
+
+/* GACHA */
+#card-section div img
+{
+    transition: transform 0.3s ease;
+}
+#cards div:hover img
+{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.chest-sprite
+{
+    width: 230px; height: 237px;
+    background-image: url('assets/treasure_chest_sprite.png');
+    background-repeat: no-repeat;
+
+    transform: scale(1.5);
+}
+.chest-sprite-anim
+{
+    animation: chestAnim .5s steps(5) forwards;
+}
+@keyframes chestAnim
+{
+    0% { background-position-x: 0px;}
+    100% { background-position-x: 100%;}
+}
+.flash-anim
+{
+    animation: flashAnim 1s ease-in forwards;
+}
+@keyframes flashAnim
+{
+    from{opacity: 0;}
+    to{opacity: 1;}
+}

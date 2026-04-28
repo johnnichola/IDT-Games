@@ -18,6 +18,9 @@ function generateRandomNum()
 }
 function initGuessPage()
 {
+    // If we are not in the guessing game page, don't run
+    if(!inputField) return;
+
     generateRandomNum();
     restartBtn.addEventListener('click', function()
     {
@@ -66,6 +69,7 @@ function initGuessPage()
     });
 }
 //#endregion
+
 
 // this is for scrolling to specific section
 function onScrollToSection(event)

@@ -151,7 +151,7 @@ function onBet(betValue)
         betAmount = betValue;
         hasBet = true;
     
-        goldElem.innerHTML = "GOLD: " + (gold - betValue);
+        goldElem.innerHTML = (gold - betValue);
     
         const betButtons = document.querySelectorAll(".bet-btn");
         betButtons.forEach(btn => 
@@ -184,7 +184,7 @@ function resetGame()
     hasSpent = false;
     isGameOver = false;
 
-    goldElem.innerHTML = "GOLD: " + gold;
+    goldElem.innerHTML = gold;
     startButtonElem.classList.remove("selected");
     startButtonElem.style.display = "none";
 
@@ -198,8 +198,7 @@ function resetAllBetButtons()
     betButtons.forEach(btn => 
     {
         betButtons.forEach(b => b.classList.remove("selected"));
-    }
-    );
+    });
 }
 
 function giveCard(charType, card)
@@ -254,12 +253,12 @@ function triggerState(state)
 function addGold(value)
 {
     gold += value;
-    goldElem.innerHTML = "GOLD: " + gold;
+    goldElem.innerHTML = gold;
 }
 function spendGold(value)
 {
     gold -= value;
-    goldElem.innerHTML = "GOLD: " + gold;
+    goldElem.innerHTML = gold;
 }
 
 function updateCardUI(owner, value)
