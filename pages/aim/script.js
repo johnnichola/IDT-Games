@@ -1,3 +1,6 @@
+
+import * as Main from '../../main.js';
+
 const targetButton = document.getElementById("move-button");
 const container = document.getElementById("container");
 
@@ -14,16 +17,17 @@ let reactionList = [];
 
 let countdown;
 
+let hasGottenReward = false;
+
 targetButton.disabled = true;
-//startMenu();
+
+document.getElementById("start-button").addEventListener('click', startButton);
 
 function startMenu()
 {
     let username;
     do { username = prompt("Enter username(Max characters: 7):"); }
     while(username.length > 7);
-
-    
 }
 
 function getRandNumber(min, max)
@@ -76,13 +80,15 @@ function moveTargetToRandom()
     const randomX = getRandNumber(0, containerWidth);
     const randomY = getRandNumber(0, containerHeight);
 
-    targetButton.style.left = randomX + "px";
-    targetButton.style.top = randomY + "px";
-}
-
-function onHover()
-{
-    console.log("Hovering");
+    anime(
+        {
+            targets: targetButton,
+            translateX: randomX + "px",
+            translateY: randomY + "px",
+            duration: 50,
+            ease: 'linear'
+        }
+    );
 }
 function onLeave()
 {
@@ -125,6 +131,13 @@ function endGame()
     {
         bestScore = reactSummary;
         document.getElementById("best").innerHTML = "BEST: " + bestScore;
+
+        // get 2 global gold when you get 500ms and below
+        if(bestScore <= 550 && !hasGottenReward)
+        {
+            hasGottenReward = true;
+            Main.addGold(2);
+        }
     }
 
     console.log("Total Reaction Time: " + reactSummary + "ms");
@@ -137,4 +150,3 @@ function roundUp(num, precision)
 }
 
 targetButton.addEventListener("click", onClickTarget);
-//window.onload = moveButton;
