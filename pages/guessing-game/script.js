@@ -14,6 +14,8 @@ let hasGottenReward = false;
 
 initGuessPage();
 
+alert("Reach a highscore of 4 guesses or below to earn 3 global gold for Gacha!");
+
 function generateRandomNum()
 {
     guessTargetNum = Math.floor(Math.random() * 100) + 1;
@@ -60,7 +62,7 @@ function initGuessPage()
                     if(highscore <= 4 && !hasGottenReward)
                     {
                         hasGottenReward = true;
-                        Main.addGold(1);
+                        Main.addGold(3);
                     }
                 }
             }

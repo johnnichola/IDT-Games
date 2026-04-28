@@ -16,6 +16,8 @@ let currentEnemyLvl = 1;
 let currentEnemyHp = 5;
 let enemyMaxHP = 5;
 
+alert("Reach Lvl 5 to earn 2 global gold for Gacha!");
+
 atkButton.addEventListener("click", () => {damageEnemy(currentDmg);});
 dmgUg.addEventListener("click", () => 
 {

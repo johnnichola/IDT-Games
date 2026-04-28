@@ -19,6 +19,8 @@ let countdown;
 
 let hasGottenReward = false;
 
+alert("Reach 550ms or below to gain 2 global gold for Gacha!");
+
 targetButton.disabled = true;
 
 document.getElementById("start-button").addEventListener('click', startButton);

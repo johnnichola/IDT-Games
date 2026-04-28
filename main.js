@@ -5,6 +5,7 @@ export function addGold(value)
     gold = getGold();
     gold += value;
     localStorage.setItem("gold", gold.toString());
+    alert(`You gained ${value} gold!`);
     console.log("Added gold: " + value + " || Total Gold: " + gold);
 }
 

@@ -12,6 +12,8 @@ let best;
 
 let hasGottenReward = false;
 
+alert("Reach 350ms or below to earn 1 global gold for Gacha!");
+
 button.addEventListener('click', buttonFunction);
 
 function buttonFunction()
