@@ -2,6 +2,7 @@ const chestBtn = document.getElementById("chest-button");
 const chestImg = document.getElementById("chest-sprite");
 const whiteFlash = document.getElementById("white-flash");
 const resetBtn = document.getElementById("reset-button");
+const rarityText = document.getElementById("card-rarity-type");
 
 // sections
 const chestSection = document.getElementById("chest-section");
@@ -76,11 +77,19 @@ function getRandomCard()
     // Face cards
     if (_randNum == 2)
     {
+        console.log("GOT A RARE CARD");
         const _faceCards = ["K", "Q", "J", "A"];
         _prefix = _faceCards[Math.floor(Math.random() * _faceCards.length) + 1];
+        rarityText.innerHTML = "RARE";
+        rarityText.classList.add('text-warning');
     }
     else
+    {
+        console.log("GOT A COMMON CARD");
         _prefix = Math.floor(Math.random() * 9) + 1;
+        rarityText.innerHTML = "COMMON";
+        rarityText.classList.add('text-white');
+    }
 
     
     return `../blackjack/assets/cards/${_prefix}_card.png`;

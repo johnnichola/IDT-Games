@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clicker</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Bootstrap 5.3.8 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body class="bg-black text-white">
+    <div class="flex justify-center align-center">
+        <div class="relative border-4 border-white p-10 w-1/2 h-[500px] flex items-center flex-col">
+
+            <div class="text-base border-2 border-red-500 p-4 m-0 flex flex-col items-center gap-2">
+                <div class="w-[300px] h-6 bg-gray-700 rounded overflow-hidden">
+                    <div id="hp-fill" class="h-full bg-red-500 w-full transition-all duration-200"></div>
+                </div>
+                <div id="enemy-hp">
+                    HP: 100 / 100
+                </div>
+            </div>
+
+            <img id="enemy-image" src="assets/enemies/enemy1.png" class="w-[185px] h-[185px] mt-5 mb-5" alt="Enemy Image">
+
+            <button id="atk-button" class="bg-red-600 hover:bg-red-700 active:scale-90 text-white text-2xl font-bold px-10 py-5 rounded-2xl shadow-xl transition transform">
+                ⚔️ ATTACK
+            </button>
+
+            <div id="ug-panel" class="absolute inset-0 hidden">
+                <!-- BACKGROUND OVERLAY -->
+                <div class="absolute inset-0 bg-black opacity-50"></div>
+
+                <!-- CONTENT -->
+                <div class="relative z-10 w-full h-full grid place-items-center">
+                    <div class="grid grid-cols-3 gap-4 text-white">
+                        <button id="dmg-ug" class="text-black border-2 border-white bg-white h-[100px] p-5">
+                            <h1>DMG</h1>
+                            <p>Upgrade damage +1</p>
+                        </button>
+
+                        <button id="click-ug" class="text-black border-2 border-white bg-white h-[100px] p-5">
+                            <h1>AUTO-CLICK</h1>
+                            <p>Auto damage +1</p>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
