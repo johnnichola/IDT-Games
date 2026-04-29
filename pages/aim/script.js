@@ -25,6 +25,7 @@ targetButton.disabled = true;
 
 document.getElementById("start-button").addEventListener('click', startButton);
 
+// unused, please ignore. was planning on adding a leaderboards
 function startMenu()
 {
     let username;
@@ -32,6 +33,7 @@ function startMenu()
     while(username.length > 7);
 }
 
+// return a random number based on parameters
 function getRandNumber(min, max)
 {
     return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -48,10 +50,10 @@ function onClickTarget() {
 
     if(isStart)
     {
-        endTime = Date.now();
+        endTime = Date.now(); // cache ending time
 
-        const elapsed = endTime - startTime;
-        reactionList.push(elapsed);
+        const elapsed = endTime - startTime; // calculate the start and pressed time
+        reactionList.push(elapsed); // add to list
         pressCount++;
     }
     startTime = Date.now();
@@ -62,7 +64,7 @@ function onClickTarget() {
 function startGame()
 {
     isStart = true;
-    startTime = Date.now();
+    startTime = Date.now(); // cache the start time
     countdown = setInterval(timer, 1000);
 }
 
@@ -74,6 +76,7 @@ function startButton()
     document.getElementById("cdtimer").innerHTML = cdTimer;
 }
 
+// move the target on bounding box
 function moveTargetToRandom()
 {
     const containerWidth = container.clientWidth - targetButton.clientWidth;
@@ -82,6 +85,7 @@ function moveTargetToRandom()
     const randomX = getRandNumber(0, containerWidth);
     const randomY = getRandNumber(0, containerHeight);
 
+    // animate circle going from point a to b
     anime(
         {
             targets: targetButton,
@@ -107,7 +111,7 @@ function timer()
 
 function endGame()
 {
-    clearInterval(countdown);
+    clearInterval(countdown); // stop timer
 
     targetButton.disabled = true;
     targetButton.removeEventListener("click", onClickTarget);
@@ -116,9 +120,7 @@ function endGame()
 
     let totalReact = 0;
     for(let i = 0; i < reactionList.length; i++)
-    {
         totalReact += parseInt(reactionList[i]);
-    }
 
     let reactSummary = roundUp((totalReact / reactionList.length), 1);
 

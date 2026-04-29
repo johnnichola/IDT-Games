@@ -44,15 +44,17 @@ resetBtn.addEventListener('click', resetGacha);
 
 async function playChestAnim()
 {
-    const _chosenCard = getRandomCard();
+    const _chosenCard = getRandomCard(); // cache random card
 
     await delay(500);
 
+    // show flash overlay
     whiteFlash.classList.remove('d-none');
     whiteFlash.classList.add('flash-anim');
 
     await delay(1000);
 
+    // show card selection UI
     chestSection.classList.add('d-none');
     cardSection.classList.remove('d-none');
 
@@ -82,6 +84,7 @@ async function playChestAnim()
                     duration: 100
                 });
                 
+                // show chosen card
                 document.getElementById("chosen-card").src = _chosenCard;
                 document.getElementById("card-rarity-type").classList.remove('d-none');
                 resetBtn.classList.remove('d-none');
@@ -105,7 +108,7 @@ function getRandomCard()
         rarityText.innerHTML = "RARE";
         rarityText.classList.add('text-warning');
     }
-    else
+    else // number cards
     {
         console.log("GOT A COMMON CARD");
         _prefix = Math.floor(Math.random() * 9) + 1;

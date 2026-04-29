@@ -20,6 +20,7 @@ function buttonFunction()
 {
     if(!isPlaying)
     {
+        // initialize pressing (at first launch)
         if(isFailed)
         {
             isFailed = false;
@@ -30,6 +31,7 @@ function buttonFunction()
         button.style.backgroundColor = "#11c1ed";
         button.innerText = "Wait...";
 
+        // set the green timing
         countdown = setTimeout(() => 
         {
             shouldClick = true;
@@ -41,6 +43,7 @@ function buttonFunction()
     }
     else
     {
+        // if clicked too soon
         button.style.backgroundColor = "#11c1ed";
         isPlaying = false;
         if(!shouldClick)
@@ -61,6 +64,7 @@ function buttonFunction()
     }
 }
 
+// unused, please ignore. was trying to implement leaderboards
 function updateLeaderboards(newEntry)
 {
     if(best === undefined || newEntry < best)

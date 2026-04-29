@@ -29,20 +29,20 @@ function initGuessPage()
     generateRandomNum();
     restartBtn.addEventListener('click', function()
     {
-        restartBtn.classList.remove("d-none");
-        guessCount = 0;
-        guessCountText.innerHTML = "Guess Count: 0";
-        restartBtn.classList.add("d-none");
-        guessRow.innerHTML = "";
+        guessCount = 0; // reset guess count
+        guessCountText.innerHTML = "Guess Count: 0"; // update UI
+        restartBtn.classList.add("d-none"); // hide restart button
+        guessRow.innerHTML = ""; // clear table
         generateRandomNum();
     });
     inputField.addEventListener('keydown', function(event)
     {
         if(event.key == "Enter")
         {
-            if(inputField.value == "") return;
+            if(inputField.value == "") return; // if empty input field, don't run
 
-            const _yourInput = inputField.value;
+            // cache input so we don't have to call the inputfield again and again
+            const _yourInput = inputField.value; 
             console.log("I hate magic: " + _yourInput);
 
             // IF CORRECT

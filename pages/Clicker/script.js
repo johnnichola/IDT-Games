@@ -51,6 +51,8 @@ function damageEnemy(dmg)
 function levelUpEnemy()
 {
     currentEnemyLvl += 1;
+    
+    // local storage for testing, remove when it is working
     localStorage.setItem("CurrentLvl", currentEnemyLvl.toString());
     console.log("Curr Lvl: " + localStorage.getItem("CurrentLvl"));
     
@@ -59,6 +61,7 @@ function levelUpEnemy()
     currentEnemyHp = enemyMaxHP;
     enemyHP.textContent = `HP: ${currentEnemyHp} / ${enemyMaxHP}`;
 
+    // randomize next enemy
     const num = Math.floor(Math.random() * 3) + 1;
     console.log(`enemy${num}`);
     enemyImg.src = `assets/enemies/enemy${num}.png`;

@@ -66,13 +66,14 @@ async function startGame()
     {
         let card = getCardValue("DEALER");
 
+        // 1 = dealer, else player
         if(i == 1)
             updateCardUI("DEALER", "*");
         else
             updateCardUI("DEALER", getCardFace(card));
         
         dealerCards.push(card);
-        await delay(delayAmount);
+        await delay(delayAmount); // delay before going to next iteration
     }
     updateDealerValue(true);
     
@@ -131,7 +132,7 @@ async function onStand()
     gameStateElem.innerHTML = "SHOWDOWN";
     hasStand = true;
     console.log(dealerCards);
-    //dealerCardsElem.innerHTML = "";
+    
     dealerCardContainerElem.innerHTML = "";
     for(let i = 0; i < dealerCards.length; i++)
     {
