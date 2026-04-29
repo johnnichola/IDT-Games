@@ -3,12 +3,16 @@ import * as Main from './main.js';
 
 const goldText = document.getElementById("gold-count");
 
-localStorage.removeItem("gold");
-let currentGold = Main.getGold();
 
+let currentGold = 0;
 console.log("Current Gold: " + currentGold);
 
-goldText.textContent = currentGold;
+window.addEventListener('pageshow', (event) => 
+{
+    currentGold = Main.getGold();
+    goldText.textContent = currentGold;
+});
+
 
 // scroll to specific area
 document.getElementById("scroll-btn").addEventListener('click', (event) => 
